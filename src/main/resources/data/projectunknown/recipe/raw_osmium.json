@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "projectunknown:raw_osmium_ore_item"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "projectunknown:raw_osmium_ore"
+  }
+}

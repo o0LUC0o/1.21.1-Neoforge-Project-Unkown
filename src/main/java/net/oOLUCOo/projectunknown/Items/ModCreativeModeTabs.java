@@ -20,12 +20,19 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ProjectUnknown.MODID);
 
     public static final Supplier<CreativeModeTab> PROJECT_UNKNOWN_TAB = CREATIVE_MODE_TAB.register("projectunknown_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.TEST_BLOCK_ITEM.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.DEEPSLATE_OSMIUM_ORE_ITEM.get()))
                     .title(Component.translatable("creativetab.projectunknown.projectunknown_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.Test_Item);
-                        output.accept(ModBlocks.TEST_BLOCK);
-
+                        output.accept(ModItems.RAW_OSMIUM_ORE);
+                        output.accept(ModItems.OSMIUM_INGOT);
+                        output.accept(ModBlocks.DEEPSLATE_OSMIUM_ORE);
+                        output.accept(ModBlocks.RAW_OSMIUM_ORE);
+                        output.accept(ModBlocks.BLOCK_OF_OSMIUM);
+                        output.accept(ModItems.OSMIUM_SWORD);
+                        output.accept(ModItems.OSMIUM_PICKAXE);
+                        output.accept(ModItems.OSMIUM_AXE);
+                        output.accept(ModItems.OSMIUM_SHOVEL);
+                        output.accept(ModItems.OSMIUM_HOE);
                     })
 
 

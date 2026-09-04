@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "projectunknown:osmium_ingot"
+    }
+  },
+  "pattern":[
+    "OOO",
+    "OOO",
+    "OOO"
+  ],
+
+  "result": {
+    "count": 1,
+    "id": "projectunknown:block_of_osmium_item"
+  }
+
+}

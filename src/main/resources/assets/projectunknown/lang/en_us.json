@@ -1,5 +1,16 @@
 {
-  "item.projectunknown.test_item": "Test Item",
-  "block.projectunknown.test_block": "Test Block",
+  "item.projectunknown.raw_osmium_ore": "Raw Osmium Ore",
+  "item.projectunknown.osmium_ingot": "Osmium Ingot",
+
+  "item.projectunknown.osmium_sword": "Osmium Sword",
+  "item.projectunknown.osmium_pickaxe": "Osmium Pickaxe",
+  "item.projectunknown.osmium_axe": "Osmium Axe",
+  "item.projectunknown.osmium_shovel": "Osmium Shovel",
+  "item.projectunknown.osmium_hoe": "Osmium Hoe",
+
+
+  "block.projectunknown.deepslate_osmium_ore": "Deepslate Osmium Ore",
+  "block.projectunknown.raw_osmium_ore": "Raw Osmium Ore",
+  "block.projectunknown.block_of_osmium": "Block of Osmium",
   "creativetab.projectunknown.projectunknown_tab": "Project Unknown"
 }

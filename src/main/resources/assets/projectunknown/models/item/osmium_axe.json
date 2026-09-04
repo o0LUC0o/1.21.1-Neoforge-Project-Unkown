@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "projectunknown:item/test_item"
+    "layer0": "projectunknown:item/osmium_axe"
   }
 }
