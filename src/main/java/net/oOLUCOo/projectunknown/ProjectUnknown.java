@@ -1,6 +1,7 @@
 package net.oOLUCOo.projectunknown;
 
 import net.minecraft.world.level.block.SoundType;
+import net.oOLUCOo.projectunknown.Items.ModCreativeModeTabs;
 import net.oOLUCOo.projectunknown.Items.ModItems;
 import net.oOLUCOo.projectunknown.blocks.ModBlocks;
 import org.slf4j.Logger;
@@ -56,6 +57,7 @@ public class ProjectUnknown {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register((modEventBus));
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
