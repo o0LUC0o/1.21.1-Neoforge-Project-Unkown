@@ -1,6 +1,8 @@
 package net.oOLUCOo.projectunknown;
 
 import net.minecraft.world.level.block.SoundType;
+import net.oOLUCOo.projectunknown.Items.ModItems;
+import net.oOLUCOo.projectunknown.blocks.ModBlocks;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -31,6 +33,8 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import static net.oOLUCOo.projectunknown.Items.ModItems.ITEMS;
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ProjectUnknown.MODID)
 public class ProjectUnknown {
@@ -52,8 +56,10 @@ public class ProjectUnknown {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        ModItems.ITEMS.register(modEventBus);
-        ModBlocks.BLOCKS.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+
 
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
@@ -75,36 +81,6 @@ public class ProjectUnknown {
 
     }
 
-    //################################
-    // ITEMS //
-    //################################
-    public class ModItems {
-
-        public static final DeferredRegister.Items ITEMS =
-                DeferredRegister.createItems(ProjectUnknown.MODID);
-
-
-        public static final DeferredItem<Item> TEST_ITEM =
-                ITEMS.register("test_item", () -> new Item(new Item.Properties()));
-    }
-        //################################
-        // BLOCKS //
-        //################################
-        public class ModBlocks {
-
-            public static final DeferredRegister.Blocks BLOCKS =
-                    DeferredRegister.createBlocks(ProjectUnknown.MODID);
-
-
-            public static final DeferredBlock<Block> TEST_BLOCK =
-                    BLOCKS.register("test_block", () -> new Block(BlockBehaviour.Properties.of()
-                            .strength(3.0f)
-                            .sound(SoundType.STONE)));
-
-
-            public static final DeferredItem<BlockItem> TEST_BLOCK_ITEM =
-                    ModItems.ITEMS.register("test_block", () -> new BlockItem(TEST_BLOCK.get(), new Item.Properties()));
-        }
 
 
 
