@@ -1,5 +1,6 @@
 package net.oOLUCOo.projectunknown;
 
+import net.minecraft.world.level.block.SoundType;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -51,6 +52,13 @@ public class ProjectUnknown {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
+
+        modEventBus.addListener(this::commonSetup);
+        NeoForge.EVENT_BUS.register(this);
+
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -66,6 +74,39 @@ public class ProjectUnknown {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
     }
+
+    //################################
+    // ITEMS //
+    //################################
+    public class ModItems {
+
+        public static final DeferredRegister.Items ITEMS =
+                DeferredRegister.createItems(ProjectUnknown.MODID);
+
+
+        public static final DeferredItem<Item> TEST_ITEM =
+                ITEMS.register("test_item", () -> new Item(new Item.Properties()));
+    }
+        //################################
+        // BLOCKS //
+        //################################
+        public class ModBlocks {
+
+            public static final DeferredRegister.Blocks BLOCKS =
+                    DeferredRegister.createBlocks(ProjectUnknown.MODID);
+
+
+            public static final DeferredBlock<Block> TEST_BLOCK =
+                    BLOCKS.register("test_block", () -> new Block(BlockBehaviour.Properties.of()
+                            .strength(3.0f)
+                            .sound(SoundType.STONE)));
+
+
+            public static final DeferredItem<BlockItem> TEST_BLOCK_ITEM =
+                    ModItems.ITEMS.register("test_block", () -> new BlockItem(TEST_BLOCK.get(), new Item.Properties()));
+        }
+
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
