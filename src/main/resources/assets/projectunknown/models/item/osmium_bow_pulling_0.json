@@ -1,0 +1,6 @@
+{
+  "parent": "projectunknown:item/osmium_bow",
+  "textures": {
+    "layer0": "projectunknown:item/osmium_bow_pulling_0"
+  }
+}

@@ -4,6 +4,7 @@ import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.oOLUCOo.projectunknown.Items.custom.ModArmorItem;
 import net.oOLUCOo.projectunknown.ProjectUnknown;
 
 public class ModItems {
@@ -40,6 +41,27 @@ public class ModItems {
                     .attributes(HoeItem.createAttributes(ModToolTiers.OSMIUM, 0F, -2.8f))));
 
 
+
+
+    public static final DeferredItem<ArmorItem> OSMIUM_HELMET = ITEMS.register("osmium_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.OSMIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> OSMIUM_CHESTPLATE = ITEMS.register("osmium_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.OSMIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> OSMIUM_PANTS = ITEMS.register("osmium_pants",
+            () -> new ArmorItem(ModArmorMaterials.OSMIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> OSMIUM_BOOTS = ITEMS.register("osmium_boots",
+            () -> new ArmorItem(ModArmorMaterials.OSMIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+
+    public static final DeferredItem<BowItem> OSMIUM_BOW = ITEMS.register("osmium_bow",
+            () -> new BowItem(new Item.Properties().durability(500)));
 
 
 

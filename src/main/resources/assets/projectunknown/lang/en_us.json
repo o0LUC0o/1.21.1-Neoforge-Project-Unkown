@@ -8,6 +8,12 @@
   "item.projectunknown.osmium_shovel": "Osmium Shovel",
   "item.projectunknown.osmium_hoe": "Osmium Hoe",
 
+  "item.projectunknown.osmium_helmet": "Osmium Helmet",
+  "item.projectunknown.osmium_chestplate": "Osmium Chestplate",
+  "item.projectunknown.osmium_pants": "Osmium Pants",
+  "item.projectunknown.osmium_boots": "Osmium Boots",
+
+  "item.projectunknown.osmium_bow": "Osmium Bow",
 
   "block.projectunknown.deepslate_osmium_ore": "Deepslate Osmium Ore",
   "block.projectunknown.raw_osmium_ore": "Raw Osmium Ore",

@@ -12,12 +12,7 @@ import net.oOLUCOo.projectunknown.ProjectUnknown;
 
 
 public class ModTags {
-
-
-
-
     public static class Blocks {
-
         public static final TagKey<Block> NEEDS_OSMIUM_TOOL = createTag("needs_osmium_tool");
         public static final TagKey<Block> INCORRECT_FOR_OSMIUM_TOOL = createTag("incorrect_for_osmium_tool");
 
@@ -27,9 +22,9 @@ public class ModTags {
     }
 
     public static class Items {
+        public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
 
-
-        private static TagKey<Item> createTag(String name){
+        private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(ProjectUnknown.MODID, name));
         }
     }

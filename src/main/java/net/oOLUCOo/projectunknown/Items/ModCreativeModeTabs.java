@@ -28,11 +28,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DEEPSLATE_OSMIUM_ORE);
                         output.accept(ModBlocks.RAW_OSMIUM_ORE);
                         output.accept(ModBlocks.BLOCK_OF_OSMIUM);
+
                         output.accept(ModItems.OSMIUM_SWORD);
                         output.accept(ModItems.OSMIUM_PICKAXE);
                         output.accept(ModItems.OSMIUM_AXE);
                         output.accept(ModItems.OSMIUM_SHOVEL);
                         output.accept(ModItems.OSMIUM_HOE);
+
+                        output.accept(ModItems.OSMIUM_HELMET);
+                        output.accept(ModItems.OSMIUM_CHESTPLATE);
+                        output.accept(ModItems.OSMIUM_PANTS);
+                        output.accept(ModItems.OSMIUM_BOOTS);
+
+                        output.accept(ModItems.OSMIUM_BOW);
                     })
 
 
