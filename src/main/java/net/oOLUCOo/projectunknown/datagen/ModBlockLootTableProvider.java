@@ -28,11 +28,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.BLOCK_OF_OSMIUM.get());
         // dropSelf(ModBlocks.MAGIC_BLOCK.get());
+        this.dropSelf(ModBlocks.RAW_OSMIUM_ORE.get());
 
         add(ModBlocks.DEEPSLATE_OSMIUM_ORE.get(),
-                block -> createOreDrop(ModBlocks.RAW_OSMIUM_ORE.get(), ModItems.RAW_OSMIUM_ORE.get()));
+                block -> createOreDrop(ModBlocks.RAW_OSMIUM_ORE.get(), ModItems.RAW_OSMIUM_ORE_BLOCK.get()));
         add(ModBlocks.DEEPSLATE_OSMIUM_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_OSMIUM_ORE.get(), ModItems.RAW_OSMIUM_ORE.get(), 2, 5));
+                block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_OSMIUM_ORE.get(), ModItems.RAW_OSMIUM_ORE_BLOCK.get(), 2, 5));
 
 
     }

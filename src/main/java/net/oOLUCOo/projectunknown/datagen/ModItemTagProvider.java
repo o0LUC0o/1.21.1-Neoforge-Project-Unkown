@@ -24,10 +24,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(ModTags.Items.TRANSFORMABLE_ITEMS)
                 .add(ModItems.OSMIUM_INGOT.get())
-                .add(ModItems.RAW_OSMIUM_ORE.get())
-                .add(Items.COAL)
-                .add(Items.STICK)
-                .add(Items.COMPASS);
+                .add(ModItems.RAW_OSMIUM_ORE_BLOCK.get());
+
 
         tag(ItemTags.SWORDS)
                 .add(ModItems.OSMIUM_SWORD.get());

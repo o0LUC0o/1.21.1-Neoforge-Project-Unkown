@@ -15,7 +15,6 @@ import net.oOLUCOo.projectunknown.blocks.ModBlocks;
 import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
-
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, ProjectUnknown.MODID, exFileHelper);
     }
@@ -28,16 +27,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
-        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
-    }
 
-    private void blockItem(DeferredBlock<?> deferredBlock) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile(
-                ProjectUnknown.MODID + ":block/" + deferredBlock.getId().getPath()));
-    }
+        ModelFile blockModel = cubeAll(deferredBlock.get());
+        simpleBlock(deferredBlock.get(), blockModel);
 
-    private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile(
-                ProjectUnknown.MODID + ":block/" + deferredBlock.getId().getPath() + appendix));
+
+        simpleBlockItem(deferredBlock.get(), blockModel);
     }
 }

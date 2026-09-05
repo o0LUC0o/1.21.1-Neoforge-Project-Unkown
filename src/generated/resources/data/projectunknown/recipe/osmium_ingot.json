@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "projectunknown:block_of_osmium"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "projectunknown:osmium_ingot"
+  }
+}

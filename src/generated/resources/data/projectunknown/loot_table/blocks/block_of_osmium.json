@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "projectunknown:block_of_osmium"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "projectunknown:blocks/block_of_osmium"
+}
